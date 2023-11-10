@@ -3,7 +3,7 @@
 //  CalcGame
 //
 //  Created by 辻 達也 on 2023/11/10.
-//
+// 
 
 import UIKit
 
