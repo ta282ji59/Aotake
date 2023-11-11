@@ -1,24 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iJY-jK-9fd">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HOME-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="SNS_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ホーム画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc4-tf-0FU">
+                                <rect key="frame" x="123" y="441.66666666666669" width="182" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dc4-tf-0FU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6pW-Yd-EIP"/>
+                            <constraint firstItem="Dc4-tf-0FU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="M0T-io-T2K"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="HOME" selectedImage="homekit" catalog="system" id="yjf-uM-HMA">
+                        <imageReference key="image" image="homekit" catalog="system" symbolScale="default"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-645.03816793893122" y="738.73239436619724"/>
+        </scene>
+        <!--MAP-->
+        <scene sceneID="8Px-bm-N2n">
+            <objects>
+                <viewController id="Gzw-eg-Se0" customClass="MapDisplay" customModule="SNS_Map" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dhw-2c-rhf">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GBI-Xh-Ygt">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="826"/>
+                                <standardMapConfiguration key="preferredConfiguration" showsTraffic="YES"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="evY-DG-5yq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="GBI-Xh-Ygt" secondAttribute="bottom" constant="100" id="efU-y7-j02"/>
+                            <constraint firstItem="GBI-Xh-Ygt" firstAttribute="top" secondItem="Dhw-2c-rhf" secondAttribute="top" id="ehh-Lw-c5w"/>
+                            <constraint firstAttribute="trailing" secondItem="GBI-Xh-Ygt" secondAttribute="trailing" id="iee-GT-65P"/>
+                            <constraint firstItem="GBI-Xh-Ygt" firstAttribute="leading" secondItem="Dhw-2c-rhf" secondAttribute="leading" id="usZ-Tw-Y6T"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MAP" selectedImage="map" catalog="system" id="WSS-l4-iYe">
+                        <imageReference key="image" image="map" catalog="system" symbolScale="default"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapview" destination="GBI-Xh-Ygt" id="TuI-L5-XvG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bU-bd-Gem" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.77570093457942" y="738.01295896328304"/>
+        </scene>
+        <!--CHAT-->
+        <scene sceneID="yBr-rY-gDw">
+            <objects>
+                <viewController id="85N-4x-5I0" customClass="ChatDisplay" customModule="SNS_Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="neY-vE-a2T">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="チャット画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Iz-Nr-ErV">
+                                <rect key="frame" x="105" y="441.66666666666669" width="218" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bkG-aS-6hd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Iz-Nr-ErV" firstAttribute="centerX" secondItem="neY-vE-a2T" secondAttribute="centerX" id="hXX-OH-ZSX"/>
+                            <constraint firstItem="8Iz-Nr-ErV" firstAttribute="centerY" secondItem="neY-vE-a2T" secondAttribute="centerY" id="pr4-TG-ddT"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="CHAT" selectedImage="mail" catalog="system" id="T8q-Va-fVt">
+                        <imageReference key="image" image="mail" catalog="system" symbolScale="default"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPQ-xJ-gRf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="739"/>
+        </scene>
+        <!--ACCOUNT-->
+        <scene sceneID="TwQ-xS-yos">
+            <objects>
+                <viewController id="IMK-D6-Az1" customClass="AccountDisplay" customModule="SNS_Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q9b-Ca-dpj">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アカウント画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wH7-tI-SyL">
+                                <rect key="frame" x="86.666666666666686" y="441.66666666666669" width="255" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e7k-2y-uDJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wH7-tI-SyL" firstAttribute="centerX" secondItem="Q9b-Ca-dpj" secondAttribute="centerX" id="Jq8-CP-vTW"/>
+                            <constraint firstItem="wH7-tI-SyL" firstAttribute="centerY" secondItem="Q9b-Ca-dpj" secondAttribute="centerY" id="dGD-uY-ZR2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ACCOUNT" badgeValue="1" selectedImage="person.crop.circle.fill" catalog="system" id="iEq-CJ-rUW">
+                        <imageReference key="image" image="person.crop.circle.fill" catalog="system" symbolScale="default"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dGF-ul-sE3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1698" y="739"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="icW-2Q-BBh">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iJY-jK-9fd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Ul-Ad-TM8">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="V18-Ww-Jua"/>
+                        <segue destination="Gzw-eg-Se0" kind="relationship" relationship="viewControllers" id="wws-mP-vOe"/>
+                        <segue destination="85N-4x-5I0" kind="relationship" relationship="viewControllers" id="9aJ-Yt-emh"/>
+                        <segue destination="IMK-D6-Az1" kind="relationship" relationship="viewControllers" id="Xtf-No-tdl"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dfs-My-amZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="4.9295774647887329"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="mail" catalog="system" width="128" height="93"/>
+        <image name="map" catalog="system" width="128" height="112"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
