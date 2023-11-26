@@ -6,7 +6,7 @@ function checkDeviceType() {
 }
 
 document.addEventListener('DOMContentLoaded', checkDeviceType);
-document.addEventListener('DOMContentLoaded', loadContent('home'));
+document.addEventListener('DOMContentLoaded', loadContent('map'));
 
 
 
@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', loadContent('home'));
 
 function loadContent(tab) {
     var url;
-    if (tab == "home") {
-        url = 'home.html'
+    if (tab == "map") {
+        url = 'map.html'
     }
     else if (tab == "sns") {
         url = 'sns.html'
