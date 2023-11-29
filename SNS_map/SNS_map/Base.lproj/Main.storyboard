@@ -18,19 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ホーム画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc4-tf-0FU">
-                                <rect key="frame" x="123" y="441.66666666666669" width="182" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sNR-58-bRC">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="831"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Dc4-tf-0FU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6pW-Yd-EIP"/>
-                            <constraint firstItem="Dc4-tf-0FU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="M0T-io-T2K"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="HOME" selectedImage="homekit" catalog="system" id="yjf-uM-HMA">
                         <imageReference key="image" image="homekit" catalog="system" symbolScale="default"/>
@@ -38,7 +33,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-645.03816793893122" y="738.73239436619724"/>
+            <point key="canvasLocation" x="-646.26168224299067" y="738.66090712742982"/>
         </scene>
         <!--MAP-->
         <scene sceneID="8Px-bm-N2n">
@@ -48,9 +43,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GBI-Xh-Ygt">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pitchEnabled="NO" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GBI-Xh-Ygt">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="826"/>
-                                <standardMapConfiguration key="preferredConfiguration" showsTraffic="YES"/>
+                                <standardMapConfiguration key="preferredConfiguration" elevationStyle="realistic"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="evY-DG-5yq"/>
@@ -169,5 +164,3 @@
         </systemColor>
     </resources>
 </document>
-
-
