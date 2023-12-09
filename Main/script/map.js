@@ -38,7 +38,7 @@ function initMap() {
         {id:'null', name: '会津大学', description:'null', latitude: 37.523842, longitude: 139.93744, category_id:'null', star:'null', genre:'null', image: 'image/pin.png' },
         {id:'null', name: '会津短大', description:'null', latitude: 37.507164, longitude: 139.945969, category_id:'null', star:'null', genre:'null', image: 'image/pin.png' },
         {id:'null', name: '会津若松駅', description:'null', latitude: 37.507866 , longitude: 139.930326, category_id:'null', star:'null', genre:'null', image: 'image/pin.png' },
-        {id:'null', name: '鶴ヶ城', description:'null', latitude: 37.48782 , longitude: 139.929666, category_id:'null', star:'null', genre:'null', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdCwqilnDylfCEc3i7B8S5Y9wMyVMv9L4v6y8aUTbkzA&s' }
+        //{id:'null', name: '鶴ヶ城', description:'null', latitude: 37.48782 , longitude: 139.929666, category_id:'null', star:'null', genre:'null', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdCwqilnDylfCEc3i7B8S5Y9wMyVMv9L4v6y8aUTbkzA&s' }
     ];
 
     function adjustMarkerSize(zoomLevel, imageUrl) {//ピンのサイズを調整するクラス
