@@ -60,13 +60,16 @@
     height: 100%;
     background-color: white;
     z-index: 1000;
+    padding-top: 30px;
     padding-left: 25px;
+    padding-right: 5px;
     /* アニメーションの設定 */
     animation-name: fadeIn;
     animation-duration: 0.2s; /* アニメーションの持続時間 */
     animation-fill-mode: forwards; /* アニメーション終了時のスタイルを維持 */
     overflow-y: auto; /* 垂直方向のスクロールを可能にする */
     max-height: 100vh;
+    background-color: azure;
 }
 .notification-panel p{
     margin-top: 30px;
